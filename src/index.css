@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 20px;
+}
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+}
+.form button {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form__row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 1px 2px 5px gray;
+  position: relative;
+}
+.form__row div {
+  width: 100px;
+}
+.form__body {
+  display: flex;
+  justify-content: space-between;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+.form__group input {
+  height: 40px;
+}
+.form__error {
+  color: red;
+  font-size: 20px;
+}
+
+.focus_true {
+  background-color: red;
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.delete {
+  background-color: rgb(226, 109, 109);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.edit {
+  background-color: rgb(69, 193, 69);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.buttons {
+}
+@media only screen and (max-width: 700px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .form__group input {
+    height: 30px;
+  }
+}
