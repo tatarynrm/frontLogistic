@@ -22,14 +22,14 @@ const DataRow = ({ note }) => {
         className={focus ? "form__row focus_true" : "form__row focus_false"}
       >
         <div>{note.date}</div>
-        <div>{note.cityFrom}</div>
-        <div>{note.cityTo}</div>
-        <div>{note.price}</div>
-        <div>{note.money}</div>
-        <div>{note.cargoOwner}</div>
-        <div>{note.driver}</div>
-        <div>{note.car}</div>
-        <div>{note.carOwner}</div>
+        <div>{note.cityFrom.toUpperCase()}</div>
+        <div>{note.cityTo.toUpperCase()}</div>
+        <div>{note.price.toUpperCase()}</div>
+        <div>{note.money.toUpperCase()}</div>
+        <div>{note.cargoOwner.toUpperCase()}</div>
+        <div>{note.driver.toUpperCase()}</div>
+        <div>{note.car.toUpperCase()}</div>
+        <div>{note.carOwner.toUpperCase()}</div>
         <div className="buttons">
           <button
             className="edit"
