@@ -92,6 +92,19 @@ code {
 
 .buttons {
 }
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+.auth__control {
+  display: flex;
+  flex-direction: column;
+}
 @media only screen and (max-width: 700px) {
   .form {
     display: flex;

@@ -3,23 +3,46 @@ import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "./utils/axios";
 import EditNote from "./pages/EditNote";
+import Auth from "./auth/Auth";
 function App() {
-  const arr = [];
+  const [auth, setAuth] = useState(false);
   const [table, setTable] = useState([]);
   const getTableData = async () => {
     const { data } = await api.get("/notes");
-    setTable(data.reverse());
+    const reverse = data.reverse();
+    setTable(reverse);
   };
   useEffect(() => {
     getTableData();
   }, [table]);
+
+  const isAuth = localStorage.getItem("pass");
+  useEffect(() => {
+    if (isAuth) {
+      setAuth(true);
+    }
+  }, [table]);
   return (
     <div className="logistic">
       <div className="container">
-        <Routes>
-          <Route path="/" element={<Home data={table} />} />
-          <Route path="/notes/:id" element={<EditNote data={table} />} />
-        </Routes>
+        {auth ? (
+          <Routes>
+            <Route path="/" element={<Home data={table} />} />
+            <Route path="/notes/:id" element={<EditNote data={table} />} />
+          </Routes>
+        ) : (
+          <Auth auth={auth} setAuth={setAuth} />
+        )}
+
+        <button
+          onClick={() => {
+            localStorage.clear();
+            setAuth(false);
+          }}
+          className="delete"
+        >
+          Вийти
+        </button>
       </div>
     </div>
   );
