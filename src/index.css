@@ -23,8 +23,8 @@ code {
 }
 
 .form {
-  width: 90%;
-  margin: 0 auto;
+  /* width: 70%; */
+  /* margin: 0 auto; */
 }
 .form button {
   width: 20%;
@@ -49,6 +49,8 @@ code {
 }
 .form__row div {
   width: 100px;
+  text-align: center;
+  align-items: center;
 }
 .form__body {
   display: flex;
@@ -122,5 +124,17 @@ code {
   }
   .form__group input {
     height: 30px;
+  }
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__row {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__row div {
+    width: 100%;
+    border: 1px solid black;
   }
 }
